@@ -64,11 +64,6 @@
 					}
 				?>
 			</table>
-			<form action="get_debttopay.php" method="POST">
-				<p>
-					<input type="submit" id="approve_button" value="Pay">
-				</p>
-			</form>
 			<form action="process_payment.php" method="POST">
 			<p>
 				<label>Loan Arrangement ID:</label>
