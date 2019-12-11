@@ -25,18 +25,16 @@
 		if(mysqli_query($conn,$query)){
 			$query = "DELETE FROM `hackathon2019_db`.`arrangements` WHERE (`arrangement_id` = '".$var_arrangement_id_text."');";
 			mysqli_query($conn,$query);
-			$message = "Payment Successful!";
-			echo "{
-					\"status\": 200,
-					\"message\": Success
-				}";
+			echo json_encode((object)[
+				'status' => 200,
+				'message' => 'Success'
+			]);
 		}
 		else{
-			echo "{
-					\"status\": 400,
-					\"message\": Failure
-				}";
-		}		
+			echo json_encode((object)[
+				'status' => 400,
+				'message' => 'Failure'
+			]);
 		mysqli_close($conn);
 	}
 ?>

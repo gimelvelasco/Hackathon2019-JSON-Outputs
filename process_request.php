@@ -32,11 +32,7 @@
 		else{
 			echo json_encode((object)[
 				'status' => 400,
-				'message' => 'Failure',
-				'lender' => $_POST['lender_text'],
-				'borrower' => $_POST['borrower_text'],
-				'amount' => $_POST['amount_number'],
-				'description' => $_POST['description_text']
+				'message' => 'Failure'
 			]);
 		}
 		mysqli_close($conn);
